@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import gallery from "../../public/images/gallery.jpg";
+
+interface GalleryCard {
+    description: string;
+    imgUrl: string;
+}
+
+const galleryList: GalleryCard[] = [
+    {
+      description: "Dermaplaning",
+      imgUrl: "/images/gallery/004.jpg"
+    },
+    {
+      description: "Dermaplaning",
+      imgUrl: "/images/gallery/005.jpg"
+    },
+    {
+      description: "IPL para manchas",
+      imgUrl: "/images/gallery/006.jpg"
+    },
+    {
+      description: "Mascarilla Hidroplástica",
+      imgUrl: "/images/gallery/008.jpg"
+    },
+    {
+      description: "Terapia Luz Led Verde",
+      imgUrl: "/images/gallery/009.jpg"
+    },
+    {
+      description: "Lifting de Pestañas",
+      imgUrl: "/images/gallery/010.jpg"
+    },
+    {
+      description: "Delineado",
+      imgUrl: "/images/gallery/001.jpg"
+    },
+    {
+      description: "Delineado",
+      imgUrl: "/images/gallery/002.jpg"
+    },
+    {
+      description: "Microblading",
+      imgUrl: "/images/gallery/003.jpg"
+    },
+    {
+      description: "Láser para eliminar tatuajes",
+      imgUrl: "/images/gallery/007.jpg"
+    }
+  ];
+---
+
+<Layout title="Galeria">
+  <main class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-7 bg-third p-3">
+        <div class="border border-5 border-white px-3 py-1 h-100">
+          <p class="fs-1 text-white fw-bold">Galería del salón</p>
+          <p class="text-white lead fs-4">
+            Bienvenido a la galería de nuestro salón, donde la creatividad y la
+            pasión se unen para resaltar tu belleza única. Aquí podrás explorar
+            una selección de nuestros trabajos más destacados, cada imagen
+            refleja nuestro compromiso con la calidad y la atención al detalle,
+            mostrando cómo transformamos la visión de nuestros clientes en
+            realidad. ¡Inspírate y ven a vivir tu propia experiencia con
+            nosotros!
+          </p>
+        </div>
+      </div>
+      <div class="col-3 p-0">
+        <img
+          src={gallery.src}
+          class="img-fluid"
+          alt="gallery"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+        {galleryList.map((i)=> 
+            <div class="col-12 col-md-3 my-2">
+                <div class="p-3 bg-light shadow">
+                    <img
+                        src={i.imgUrl}
+                        class="img-fluid"
+                        alt="image"
+                    />
+                    <p class="lead mt-2">{ i.description }</p>
+                </div>
+            </div>
+        )}
+        
+    </div>
+  </main>
+</Layout>

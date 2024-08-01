@@ -1,0 +1,128 @@
+---
+import type { ServiceGroup } from "../interfaces/ServiceGroup";
+
+import Layout from "../layouts/Layout.astro";
+
+import service001 from "../../public/images/services001.jpg";
+import service002 from "../../public/images/services002.jpg";
+
+const servicesGroup: ServiceGroup[] = [
+  {
+    name: "Pestañas",
+    services: [
+      {
+        name: "Extensiones clasicas",
+        price: 95,
+      },
+      {
+        name: "Relleno de clasicas",
+        price: 55,
+      },
+      {
+        name: "Extensiones volumen 3D",
+        price: 115,
+      },
+      {
+        name: "Relleno volumen 3D",
+        price: 80,
+      },
+    ],
+  },
+  {
+    name: "Microblading & PMU",
+    services: [
+      {
+        name: "Microblading",
+        price: 350,
+      },
+      {
+        name: "Retoque al mes",
+        price: 150,
+      },
+      {
+        name: "Retoque fuera de tiempo",
+        price: 180,
+      },
+      {
+        name: "Retoque al año",
+        price: 200,
+      },
+    ],
+  },
+];
+---
+
+<Layout title="Servicios">
+  <main class="container">
+    <div class="row mb-5">
+      <div class="col-3 p-0">
+        <img src={service001.src} class="card-img-top" alt="..." />
+      </div>
+      <div class="col-6 bg-first p-3">
+        <div class="border border-5 border-white p-3 h-100">
+          <p class="fs-1 text-white fw-bold">Nuestros servicios</p>
+          <p class="lead text-white fs-4">
+            Déjate consentir en nuestro acogedor espacio, donde la atención
+            personalizada y la calidad son nuestras prioridades. ¡Te invitamos a
+            visitarnos y descubrir todo lo que tenemos para ofrecerte! Tu
+            belleza y satisfacción son nuestra pasión.
+          </p>
+        </div>
+      </div>
+      <div class="col-3 p-0">
+        <img src={service002.src} class="card-img-top" alt="..." />
+      </div>
+      <div class="col-12 bg-third p-3">
+        <div class="p-3">
+          <p class="fs-1 text-white fw-bold">Políticas de servicios</p>
+          <p class="lead text-white">
+            • VENIR SIN MAQUILLAJE DEBIDO A QUE EL MAQUILLAJE PUEDE AFECTAR EN
+            SU SERVICIO.
+          </p>
+          <p class="lead text-white">
+            • VENIR SIN ACOMPAÑANTE, EL ESTUDIO ES PEQUEÑO.
+          </p>
+          <p class="lead text-white">
+            • SI UTILIZA LENTES DE CONTACTO TRAER EL ENVASE PARA GUARDARLOS. •
+            NO SE ACEPTAN NIÑOS.
+          </p>
+          <p class="lead text-white">
+            • DEBE REALIZAR UN ABONO DEL 25% DE SU SERVICIO PARA SEPARAR SU CITA
+            EL CUAL SERÁ INCLUIDO EN SU SERVICIO.
+          </p>
+          <p class="lead text-white">
+            • EL ABONO NO ES REEMBOLSABLE BAJO NINGUNA CIRCUNSTANCIA, SI TIENE
+            ALGUN INCONVENIENTE PARA ASISTIR A SU CITA SE LE PUEDE REAGENDAR
+            AVISANDO HASTA MÁXIMO 24 HORAS ANTES DE LA MISMA. SE REAGENDA UNA
+            SOLA VEZ.
+          </p>
+          <p class="lead text-white">
+            • SE ESPERA MÁXIMO 15 MINUTOS DE ATRASO, YA QUE DESPUÉS DE USTED
+            VIENE OTRA CLIENTA Y ME GUSTA DARLE UN SERVICIO DE CALIDAD Y
+            PERSONALIZADO A CADA UNA DE USTEDES.
+          </p>
+          <p class="lead text-white fw-bold">
+            Al realizar su depósito usted está de acuerdo, acepta las politicas
+            y asume la responsabildad de cumplirlas
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      {servicesGroup.map((i) =>
+        <div class="col-12 col-md-3 my-2">
+            <div class="p-3 bg-light shadow">
+                <p class="lead border-bottom border-third border-3">{i.name}</p>
+                {i.services.map((j)=>
+                    <p class="fs-6 lead">
+                        {j.name}
+                        <span class="float-end">$ {j.price}</span>
+                    </p>
+                )}
+            </div>
+        </div>
+      )}
+    </div>
+  </main>
+</Layout>
