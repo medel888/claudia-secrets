@@ -4,11 +4,10 @@ import type { ServiceGroup } from "../interfaces/ServiceGroup";
 import Layout from "../layouts/Layout.astro";
 
 import service001 from "../../public/images/services001.jpg";
-import service002 from "../../public/images/services002.jpg";
 
 const servicesGroup: ServiceGroup[] = [
   {
-    name: "Pestañas",
+    name: "PESTAÑAS",
     services: [
       {
         name: "Extensiones clasicas",
@@ -53,76 +52,99 @@ const servicesGroup: ServiceGroup[] = [
 ---
 
 <Layout title="Servicios">
-  <main class="container">
-    <div class="row mb-5">
-      <div class="col-3 p-0">
-        <img src={service001.src} class="card-img-top" alt="..." />
-      </div>
-      <div class="col-6 bg-first p-3">
-        <div class="border border-5 border-white p-3 h-100">
-          <p class="fs-1 text-white fw-bold">Nuestros servicios</p>
-          <p class="lead text-white fs-4">
+  <main class="">
+    <!--  -->
+    <div class="container col-xxl-8 px-4">
+      <div class="row flex-lg-row-reverse justify-content-center g-5 py-5">
+        <div class="col-8 col-sm-8 col-lg-6 m-0 px-sm-auto">
+          <img
+            src={service001.src}
+            class="d-block img-fluid p-sm-3 p-md-5"
+            alt="Bootstrap Themes"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-3 lh-1 mb-3 text-third montserrat-bold">
+            NUESTROS SERVICIOS
+          </h1>
+          <p class="fs-5 lead text-third montserrat-regular">
             Déjate consentir en nuestro acogedor espacio, donde la atención
             personalizada y la calidad son nuestras prioridades. ¡Te invitamos a
             visitarnos y descubrir todo lo que tenemos para ofrecerte! Tu
             belleza y satisfacción son nuestra pasión.
           </p>
-        </div>
-      </div>
-      <div class="col-3 p-0">
-        <img src={service002.src} class="card-img-top" alt="..." />
-      </div>
-      <div class="col-12 bg-third p-3">
-        <div class="p-3">
-          <p class="fs-1 text-white fw-bold">Políticas de servicios</p>
-          <p class="lead text-white">
-            • VENIR SIN MAQUILLAJE DEBIDO A QUE EL MAQUILLAJE PUEDE AFECTAR EN
-            SU SERVICIO.
-          </p>
-          <p class="lead text-white">
-            • VENIR SIN ACOMPAÑANTE, EL ESTUDIO ES PEQUEÑO.
-          </p>
-          <p class="lead text-white">
-            • SI UTILIZA LENTES DE CONTACTO TRAER EL ENVASE PARA GUARDARLOS. •
-            NO SE ACEPTAN NIÑOS.
-          </p>
-          <p class="lead text-white">
-            • DEBE REALIZAR UN ABONO DEL 25% DE SU SERVICIO PARA SEPARAR SU CITA
-            EL CUAL SERÁ INCLUIDO EN SU SERVICIO.
-          </p>
-          <p class="lead text-white">
-            • EL ABONO NO ES REEMBOLSABLE BAJO NINGUNA CIRCUNSTANCIA, SI TIENE
-            ALGUN INCONVENIENTE PARA ASISTIR A SU CITA SE LE PUEDE REAGENDAR
-            AVISANDO HASTA MÁXIMO 24 HORAS ANTES DE LA MISMA. SE REAGENDA UNA
-            SOLA VEZ.
-          </p>
-          <p class="lead text-white">
-            • SE ESPERA MÁXIMO 15 MINUTOS DE ATRASO, YA QUE DESPUÉS DE USTED
-            VIENE OTRA CLIENTA Y ME GUSTA DARLE UN SERVICIO DE CALIDAD Y
-            PERSONALIZADO A CADA UNA DE USTEDES.
-          </p>
-          <p class="lead text-white fw-bold">
-            Al realizar su depósito usted está de acuerdo, acepta las politicas
-            y asume la responsabildad de cumplirlas
-          </p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a
+              href="#politicas"
+              class="btn btn-outline-third btn-lg px-3 border-2 montserrat-bold"
+              >Politicas de servicios</a
+            >
+            <a
+              href="#servicios"
+              class="btn btn-outline-third btn-lg px-3 border-2 montserrat-bold"
+              >Servicios</a
+            >
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      {servicesGroup.map((i) =>
-        <div class="col-12 col-md-3 my-2">
-            <div class="p-3 bg-light shadow">
-                <p class="lead border-bottom border-third border-3">{i.name}</p>
-                {i.services.map((j)=>
-                    <p class="fs-6 lead">
-                        {j.name}
-                        <span class="float-end">$ {j.price}</span>
-                    </p>
-                )}
+    <div class="container-fluid bg-third my-5 p-5" id="politicas">
+      <h2 class="display-5 text-white montserrat-bold mb-4">
+        Políticas de servicios
+      </h2>
+      <p class="lead text-white">
+        • VENIR SIN MAQUILLAJE DEBIDO A QUE EL MAQUILLAJE PUEDE AFECTAR EN SU
+        SERVICIO.
+      </p>
+      <p class="lead text-white">
+        • VENIR SIN ACOMPAÑANTE, EL ESTUDIO ES PEQUEÑO.
+      </p>
+      <p class="lead text-white">
+        • SI UTILIZA LENTES DE CONTACTO TRAER EL ENVASE PARA GUARDARLOS.
+      </p>
+      <p class="lead text-white">• NO SE ACEPTAN NIÑOS.</p>
+      <p class="lead text-white">
+        • DEBE REALIZAR UN ABONO DEL 25% DE SU SERVICIO PARA SEPARAR SU CITA EL
+        CUAL SERÁ INCLUIDO EN SU SERVICIO.
+      </p>
+      <p class="lead text-white">
+        • EL ABONO NO ES REEMBOLSABLE BAJO NINGUNA CIRCUNSTANCIA, SI TIENE ALGUN
+        INCONVENIENTE PARA ASISTIR A SU CITA SE LE PUEDE REAGENDAR AVISANDO
+        HASTA MÁXIMO 24 HORAS ANTES DE LA MISMA. SE REAGENDA UNA SOLA VEZ.
+      </p>
+      <p class="lead text-white">
+        • SE ESPERA MÁXIMO 15 MINUTOS DE ATRASO, YA QUE DESPUÉS DE USTED VIENE
+        OTRA CLIENTA Y ME GUSTA DARLE UN SERVICIO DE CALIDAD Y PERSONALIZADO A
+        CADA UNA DE USTEDES.
+      </p>
+      <p class="lead fw-bold text-white">
+        AL REALIZAR SU DEPÓSITO USTED ESTÁ DE ACUERDO, ACEPTA LAS POÍTICAS Y
+        ASUME LA RESPONZABILIDAD DE CUMPLIRLAS
+      </p>
+    </div>
+
+    <div class="row container" id="servicios">
+      {
+        servicesGroup.map((i) => (
+          <div class="col-12 col-md-4 my-2">
+            <div class="p-3">
+              <p class="text-center text-light lead fw-bold bg-third">
+                {i.name}
+              </p>
+              <div class="p-2">
+                {i.services.map((j) => (
+                  <p class="lead text-third">
+                    {j.name}
+                    <span class="float-end">{j.price} $</span>
+                  </p>
+                ))}
+              </div>
             </div>
-        </div>
-      )}
+          </div>
+        ))
+      }
     </div>
   </main>
 </Layout>
