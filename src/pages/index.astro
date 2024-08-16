@@ -4,6 +4,25 @@ import Layout from "../layouts/Layout.astro";
 import principalMovil from "../../public/images/banner-movil.png";
 import principalDesktop from "../../public/images/banner-desktop.png";
 import servicio from "../../public/images/servicios/microblading.jpg";
+import microblading from "../../public/images/servicios/microblading.jpg";
+import pmuLips from "../../public/images/servicios/pmu-lips.jpg";
+import tratamientosEsteticos from "../../public/images/servicios/tratamientos-esteticos.jpg";
+import fibroblast from "../../public/images/servicios/fibroblast.jpg";
+import cejas from "../../public/images/servicios/cejas.jpg";
+import pestañas from "../../public/images/servicios/pestañas.jpg";
+import depilacionLaser from "../../public/images/servicios/depilacion-laser.jpg";
+import depilacionConCera from "../../public/images/servicios/depilacion-con-cera.jpg";
+import abaut from "../../public/images/abaut.jpg";
+
+const galeyList: string[] = [
+  "/images/galeria/001.jpg",
+  "/images/galeria/002.jpg",
+  "/images/galeria/003.jpg",
+  "/images/galeria/004.jpg",
+  "/images/galeria/005.jpg",
+  "/images/galeria/006.jpg",
+  "/images/galeria/007.jpg"
+  ];
 ---
 
 <Layout title="Claudia Secrets">
@@ -30,266 +49,176 @@ import servicio from "../../public/images/servicios/microblading.jpg";
         </div>
       </div>
     </header>
-
-    <div class="d-flex justify-content-around my-5">
-      <button class="btn btn-outline-first btn-lg border-2 rounded-0 w-25"
-        >PROGRAMAR CITA</button
-      >
-      <button class="btn btn-outline-first btn-lg border-2 rounded-0 w-25"
-        >PROGRAMAR CONSULTA 0NLINE</button
-      >
+    <div
+      class="row container-fluid justify-content-center justify-content-md-around my-5 mx-0 p-0"
+    >
+      <div class="col-11 col-md-4">
+        <button
+          class="btn btn-outline-first btn-lg border-2 rounded-0 w-100 my-2 my-md-0"
+          >PROGRAMAR CITA</button
+        >
+      </div>
+      <div class="col-11 col-md-4">
+        <button
+          class="btn btn-outline-first btn-lg border-2 rounded-0 w-100 my-2 my-md-0"
+          >PROGRAMAR CONSULTA 0NLINE</button
+        >
+      </div>
     </div>
 
     <div class="container">
-      <div class="row d-flex justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+          <div class="row justify-content-center">
+            <div class="col-11 col-md-4 px-0">
+              <img src={microblading.src} alt="servicio" class="img-fluid" />
             </div>
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+            <div class="col-11 col-md-8 p-4 bg-second">
+              <p class="fs-2 text-first fw-bold">MICROBLADING</p>
+              <p>
+                El microblading es una técnica de maquillaje semipermanente que
+                utiliza una herramienta manual para implantar pigmento en la
+                piel, creando la apariencia de cejas más definidas y naturales.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+          <div
+            class="row justify-content-center flex-column-reverse flex-md-row"
+          >
+            <div class="col-11 col-md-8 p-4 bg-second mx-auto mx-md-0">
+              <p class="fs-2 text-first fw-bold">
+                PMU LIPS (Maquillaje Permanente de Labios)
+              </p>
+              <p>
+                El PMU lips es un tratamiento de maquillaje semipermanente que
+                define y da color a los labios, mejorando su forma y volumen.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+            <div class="col-11 col-md-4 px-0 mx-auto mx-md-0">
+              <img src={pmuLips.src} alt="servicio" class="img-fluid" />
             </div>
           </div>
         </div>
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+          <div class="row justify-content-center">
+            <div class="col-11 col-md-4 px-0">
+              <img
+                src={tratamientosEsteticos.src}
+                alt="servicio"
+                class="img-fluid"
+              />
             </div>
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+            <div class="col-11 col-md-8 p-4 bg-second">
+              <p class="fs-2 text-first fw-bold">TRATAMIENTOS ESTÉTICOS</p>
+              <p>
+                Los tratamientos estéticos ofrecen una amplia gama de beneficios
+                que pueden mejorar tanto la apariencia física como la salud de
+                la piel y el bienestar emocional.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+          <div
+            class="row justify-content-center flex-column-reverse flex-md-row"
+          >
+            <div class="col-11 col-md-8 p-4 bg-second mx-auto mx-md-0">
+              <p class="fs-2 text-first fw-bold">FIBROBLAST</p>
+              <p>
+                El fibroblast es un tratamiento estético no invasivo que utiliza
+                plasma para tensar la piel, mejorar arrugas y flacidez.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+            <div class="col-11 col-md-4 px-0 mx-auto mx-md-0">
+              <img src={fibroblast.src} alt="servicio" class="img-fluid" />
             </div>
           </div>
         </div>
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+          <div class="row justify-content-center">
+            <div class="col-11 col-md-4 px-0">
+              <img src={cejas.src} alt="servicio" class="img-fluid" />
             </div>
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+            <div class="col-11 col-md-8 p-4 bg-second">
+              <p class="fs-2 text-first fw-bold">CEJAS</p>
+              <p>
+                El arreglo de cejas incluye técnicas como depilación, diseño y
+                perfilado para dar forma y definición a las cejas.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+          <div
+            class="row justify-content-center flex-column-reverse flex-md-row"
+          >
+            <div class="col-11 col-md-8 p-4 bg-second mx-auto mx-md-0">
+              <p class="fs-2 text-first fw-bold">PESTAÑAS</p>
+              <p>
+                El arreglo de pestañas puede incluir tratamientos como
+                extensiones, lifting o tintura para realzar la mirada.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+            <div class="col-11 col-md-4 px-0 mx-auto mx-md-0">
+              <img src={pestañas.src} alt="servicio" class="img-fluid" />
             </div>
           </div>
         </div>
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+          <div class="row justify-content-center">
+            <div class="col-11 col-md-4 px-0">
+              <img src={depilacionLaser.src} alt="servicio" class="img-fluid" />
             </div>
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+            <div class="col-11 col-md-8 p-4 bg-second">
+              <p class="fs-2 text-first fw-bold">
+                DEPILACIÓN LÁSER Diodo Soprano Ice
+              </p>
+              <p>
+                La depilación láser es un método que utiliza luz láser para
+                eliminar el vello no deseado de manera permanente luego de
+                varias sesiones.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
           </div>
         </div>
         <div class="col-12 col-md-8 my-3">
-          <div class="row">
-            <div class="col-8 p-4 bg-second">
-              <div
-                class="d-flex align-items-start flex-column bd-highlight mb-3"
-                style="height: 200px;"
-              >
-                <div class="p-2 bd-highlight">
-                  <p class="fs-2 text-first fw-bold">MICROBLADING</p>
-                </div>
-                <div class="p-2 bd-highlight">
-                  <p>
-                    El microblading es una técnica de maquillaje semipermanente
-                    que utiliza una herramienta manual para implantar pigmento
-                    en la piel, creando la apariencia de cejas más definidas y
-                    naturales.
-                  </p>
-                </div>
-                <div class="mt-auto p-2 bd-highlight">
-                  <a href="" class="text-decoration-none text-first"
-                    >VER PRECIOS</a
-                  >
-                </div>
-              </div>
+          <div
+            class="row justify-content-center flex-column-reverse flex-md-row"
+          >
+            <div class="col-11 col-md-8 p-4 bg-second mx-auto mx-md-0">
+              <p class="fs-2 text-first fw-bold">DEPILACIÓN CON CERA</p>
+              <p>
+                La depilación con cera es un método físico que elimina el vello
+                desde la raíz utilizando cera caliente o fría.
+              </p>
+              <a href="" class="text-decoration-none text-first">VER PRECIOS</a>
             </div>
-            <div class="col-4 px-0">
-              <img src={servicio.src} alt="servicio" class="img-fluid" />
+            <div class="col-11 col-md-4 px-0 mx-auto mx-md-0">
+              <img
+                src={depilacionConCera.src}
+                alt="servicio"
+                class="img-fluid"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="bg-second my-5 py-5">
-      <div class="row container d-flex justify-content-center">
-        <div class="col-12 col-md-3">
-          <img src={servicio.src} alt="" class="img-fluid rounded-circle" />
+    <div class="bg-second container-fluid my-5 py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-4 px-5 py-md-5 text-center">
+          <img src={abaut.src} alt="" class="img-fluid" />
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-8 text-center text-md-start px-5 px-md-3 pt-4 py-md-5">
           <p class="display-4 fw-bold text-first">CLAUDIA SECRETS</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
@@ -304,27 +233,16 @@ import servicio from "../../public/images/servicios/microblading.jpg";
       </div>
     </div>
     <div class="container my-5">
-      <div class="row row-cols-4">
-        <div class="col p-3">
-          <div class="bg-second p-3">
-            <img src={servicio.src} alt="" class="img-fluid" />
-          </div>
-        </div>
-        <div class="col p-3">
-          <div class="bg-second p-3">
-            <img src={servicio.src} alt="" class="img-fluid" />
-          </div>
-        </div>
-        <div class="col p-3">
-          <div class="bg-second p-3">
-            <img src={servicio.src} alt="" class="img-fluid" />
-          </div>
-        </div>
-        <div class="col p-3">
-          <div class="bg-second p-3">
-            <img src={servicio.src} alt="" class="img-fluid" />
-          </div>
-        </div>
+      <div class="row row-cols-1 row-cols-md-4">
+        {
+          galeyList.map((i) => (
+            <div class="col p-3">
+              <div class="bg-second p-3">
+                <img src={i} alt="" class="img-fluid" />
+              </div>
+            </div>
+          ))
+        }
       </div>
     </div>
     <div class="bg-second mt-5 py-5 text-center">
@@ -362,7 +280,7 @@ import servicio from "../../public/images/servicios/microblading.jpg";
       </div>
       <a
         href=""
-        class="btn btn-outline-first btn-lg border-2 rounded-0 w-25 my-5"
+        class="btn btn-outline-first btn-lg border-2 rounded-0 w-md-25 my-5"
         >PROGRAMAR CITA</a
       >
     </div>
