@@ -12,9 +12,8 @@ import pestañas from "../../public/images/servicios/pestañas.jpg";
 import depilacionLaser from "../../public/images/servicios/depilacion-laser.jpg";
 import depilacionConCera from "../../public/images/servicios/depilacion-con-cera.jpg";
 import abaut from "../../public/images/abaut.jpg";
-import testimonio from "../../public/images/testimonios/001.jpg";
 
-const galeyList: string[] = [
+const galeryList: string[] = [
   "/images/galeria/001.jpg",
   "/images/galeria/002.jpg",
   "/images/galeria/003.jpg",
@@ -22,6 +21,57 @@ const galeyList: string[] = [
   "/images/galeria/005.jpg",
   "/images/galeria/006.jpg",
   "/images/galeria/007.jpg",
+];
+
+interface Testimonios {
+  imgUrl: string;
+  name: string;
+  description: string;
+}
+
+const testimoniosList: Testimonios[] = [
+  {
+    imgUrl: "/images/testimonios/001.jpg",
+    name: "ARIANA BEJERANO",
+    description:
+      "MIIIIIIIII PRECIOSA CLAU gracias por tanto por mis cejas por tu cariño tu amistad por ser como eres tú eres más hermosa te quiero mucho !!! Y como te lo dije hoy te mereces lo mejor del mundo ❤️ cuentas conmigo siempre.",
+  },
+  {
+    imgUrl: "/images/testimonios/002.jpg",
+    name: "LARITZA",
+    description:
+      "Mis primeras cajitas fueron en tus bendecidas manos estará Baños todavía con el uso de la mascarilla 😷 y recién habían abierto las carreteras para que los municipios pudieran ir a provincias y fue la mejor decisión luego volví dos veces más hasta que fuiste en busca de tus sueños BENDICIONES CLAUDIA",
+  },
+  {
+    imgUrl: "/images/testimonios/003.jpg",
+    name: "MAYELA GONZÁLEZ",
+    description:
+      "Mi amor bello súper complacida hace ya como 2 años me hiciste mis cajitas y mis labios 👄 no puede entregarme a mejores manos estoy súper feliz de ser tu clienta y amiga tkmmmmm y sabes que pronto estoy ahí 😘",
+  },
+  {
+    imgUrl: "/images/testimonios/004.jpg",
+    name: " ASHLEY LANDAVERDE",
+    description:
+      "Yo nunca me había realizado un procedimiento como el microblading o la pigmentación en los labios pero a pesar de que tenía un poquito de miedo al principio, fue lo mejor que me pudo haber pasado 😍😍😍 Estoy enamorada de los resultados y de lo bella que me dejaste. Es increíble como un cambio tan pequeño puede hacer una gran diferencia. Gracias por hacer una gran diferencia. Gracias por hacer un trabajo tan maravilloso Claudia",
+  },
+  {
+    imgUrl: "/images/testimonios/005.jpg",
+    name: "DIANYK CABRERA",
+    description:
+      "Bueno mi vida lo primero que me realice contigo fue mis cejitas, que prácticamente parecían que nunca me las había sacado, me las dejaste más que perfectas, la calidad de trabajo y productos es un 100% muy profesional.... también me hice una limpieza facial donde me quitaste todos los puntos blancos, la textura de mi piel es impresionante, suave, hidratada... y lo último fue la depilación láser que fue recientemente, una experiencia muy satisfactoria en tus manos es garantía de excelencia y lo más importante es el trato que brindas muy amable, atenta y confiable... súper complacida con todos los servios",
+  },
+  {
+    imgUrl: "/images/testimonios/006.jpg",
+    name: " MAITE ÁLVAREZ TANG",
+    description:
+      "Hola Clau encanta con tu trabajo me hice las cejas contigo hace 2 años y pronto voy por más servicios tuyos, eres una increíble me encantan tus trabajos bendiciones 🙏🏻",
+  },
+  {
+    imgUrl: "/images/testimonios/007.jpg",
+    name: "BRIANIS CLAUDIA LEIVA",
+    description:
+      "Yo me he hecho de todo contigo 😂😂 empezar por láser y no que cuántas cosas me he hecho, y eres la mejor ♥️ tu sabes que yo te adoro mucho mucho hace rato no voy a verte por cosas de la vida pero mañana ya de nuevo en tus manos ♥️ eres la mejor de la mejor ♥️",
+  },
 ];
 ---
 
@@ -40,11 +90,13 @@ const galeyList: string[] = [
           alt="principal"
         />
         <div
-          class="card-img-overlay px-4 py-5 p-md-5 my-5 text-start"
-          data-aos="zoom-in"
+          class="card-img-overlay align-self-end px-4 py-5 p-md-5 text-start"
         >
-          <p class="text-white display-3 display-md-2 montserrat-bold">
-            Lorem ipsum, dolor sit amet consectetur adipisicing.
+          <p class="text-white display-2 display-md-2 montserrat-bold">
+            ESTÁS HECHA PARA BRILLAR.
+          </p>
+          <p class="text-white display-6 display-md-2 montserrat-bold">
+            VEN Y DESCUBRE TU LADO MÁS RADIANTE.
           </p>
         </div>
       </div>
@@ -237,7 +289,7 @@ const galeyList: string[] = [
     <div class="container my-5">
       <div class="row row-cols-1 row-cols-md-4">
         {
-          galeyList.map((i) => (
+          galeryList.map((i) => (
             <div class="col p-3">
               <div class="bg-second p-3">
                 <img src={i} alt="" class="img-fluid" />
@@ -251,28 +303,24 @@ const galeyList: string[] = [
       <p class="display-5 text-first fw-bold">TESTIMONIOS</p>
       <div class="container py-5">
         <div class="row d-flex justify-content-center">
-          <div class="position-relative col-12 col-md-4 p-3">
-            <div class="p-4 bg-third text-center">
-              <img
-                src={testimonio.src}
-                alt="testimonio"
-                class="img-fluid position-absolute top-0 start-50 translate-middle w-25 rounded-circle"
-              />
-              <p class="mt-4 montserrat-bold">ARIANA BEJERANO</p>
-              <p>
-                MIIIIIIIII PRECIOSA CLAU gracias por tanto por mis cejas por tu
-                cariño tu amistad por ser como eres tú eres más hermosa te
-                quiero mucho !!! Y como te lo dije hoy te mereces lo mejor del
-                mundo ❤️ cuentas conmigo siempre.
-              </p>
-            </div>
-          </div>
-          
+          {
+            testimoniosList.map((i) => (
+              <div class="position-relative col-12 col-md-4 my-5 p-3">
+                <div class="h-100 p-4 bg-third text-center">
+                  <img
+                    src={i.imgUrl}
+                    alt="testimonio"
+                    class="img-fluid position-absolute top-0 start-50 translate-middle w-25 rounded-circle"
+                  />
+                  <p class="mt-4 montserrat-bold">{i.name}</p>
+                  <p>{i.description}</p>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
-      <a
-        href=""
-        class="btn btn-outline-first btn-lg border-2 rounded-0 w-md-25 my-5"
+      <a href="" class="btn btn-outline-first btn-lg border-2 rounded-0 w-md-25"
         >PROGRAMAR CITA</a
       >
     </div>
