@@ -18,6 +18,7 @@ $custom-colors: (
   "first": #f6c6c6,
   "second": #fff3f3,
   "third": #f7e3e3,
+  "fourth": #bf9b5a
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
