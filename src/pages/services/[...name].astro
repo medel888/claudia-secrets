@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { servicesList } from "../../content/services";
+
+export async function getStaticPaths() {
+  return servicesList.map(
+    ({ name, imgUrl, description, benefits, aftercare, prices }) => {
+      return {
+        params: { name },
+        props: { name, imgUrl, description, benefits, aftercare, prices },
+      };
+    }
+  );
+}
+
+const { name, imgUrl, description, benefits, aftercare, prices } = Astro.props;
+---
+
+<Layout title={name}>
+  <main>
+    <div class="container">
+      <div class="row conatiner-fluid py-5">
+        <div class="col-12 col-md-3">
+          <img src={imgUrl} alt={name} class="img-fluid shadow" />
+        </div>
+        <div class="col-12 col-md-8 px-4 d-flex align-items-center">
+          <div>
+            <h1 class="display-3 fw-bold text-first">{name}</h1>
+            <p class="lead">{description}</p>
+          </div>
+        </div>
+      </div>
+      <div class="conatiner-fluid">
+        <h2 class="display-6 fw-bold text-first">Beneficios</h2>
+        {benefits.map((i) => <p class="lead">• {i}</p>)}
+        <h2 class="display-6 fw-bold text-first">Cuidados Posteriores</h2>
+        {aftercare.map((i) => <p class="lead">• {i}</p>)}
+        <h2 class="display-6 fw-bold text-first">Precios</h2>
+        <div class="col-12 col-md-4 my-2">
+          <div class="p-2">
+            {
+              prices.map((j) => (
+                <p class="lead">
+                  {j.name}
+                  <span class="float-end">{j.price} $</span>
+                </p>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
