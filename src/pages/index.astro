@@ -6,146 +6,13 @@ import principalMovil from "../../public/images/banner-movil.png";
 import principalDesktop from "../../public/images/banner-desktop.png";
 import abaut from "../../public/images/abaut.jpg";
 
-interface Service {
-  direction: boolean;
-  img: string;
-  title: string;
-  caption: string;
-  description: string;
-}
+import { servicesList } from "../content/services"
+import { galleryList } from "../content/gallery"; 
+import { testimonialsList } from "../content/testimonials"
 
-const serviceList: Service[] = [
-  {
-    direction: true,
-    img: "/images/servicios/microblading.jpg",
-    title: "MICROBLADING",
-    caption: "",
-    description:
-      "El microblading es una técnica de maquillaje semipermanente que utiliza una herramienta manual para implantar pigmento en la piel, creando la apariencia de cejas más definidas y naturales.",
-  },
-  {
-    direction: false,
-    img: "/images/servicios/pmu-lips.jpg",
-    title: "PMU LIPS",
-    caption: "(Maquillaje Permanente de Labios)",
-    description:
-      "El PMU lips es un tratamiento de maquillaje semipermanente que define y da color a los labios, mejorando su forma y volumen.",
-  },
-  {
-    direction: true,
-    img: "/images/servicios/tratamientos-esteticos.jpg",
-    title: "TRATAMIENTOS ESTÉTICOS",
-    caption: "",
-    description:
-      "Los tratamientos estéticos ofrecen una amplia gama de beneficios que pueden mejorar tanto la apariencia física como la salud de la piel y el bienestar emocional.",
-  },
-  {
-    direction: false,
-    img: "/images/servicios/fibroblast.jpg",
-    title: "FIBROBLAST",
-    caption: "",
-    description:
-      "El fibroblast es un tratamiento estético no invasivo que utiliza plasma para tensar la piel, mejorar arrugas y flacidez.",
-  },
-  {
-    direction: true,
-    img: "/images/servicios/cejas.jpg",
-    title: "CEJAS",
-    caption: "",
-    description:
-      "El arreglo de cejas incluye técnicas como depilación, diseño y perfilado para dar forma y definición a las cejas.",
-  },
-  {
-    direction: false,
-    img: "/images/servicios/pestañas.jpg",
-    title: "PESTAÑAS",
-    caption: "",
-    description:
-      "El arreglo de pestañas puede incluir tratamientos como extensiones, lifting o tintura para realzar la mirada.",
-  },
-  {
-    direction: true,
-    img: "/images/servicios/depilacion-laser.jpg",
-    title: "DEPILACIÓN LÁSER",
-    caption: "Diodo Soprano Ice",
-    description:
-      "La depilación láser es un método que utiliza luz láser para eliminar el vello no deseado de manera permanente luego de varias sesiones.",
-  },
-  {
-    direction: false,
-    img: "/images/servicios/depilacion-con-cera.jpg",
-    title: "DEPILACIÓN CON CERA",
-    caption: "",
-    description:
-      "La depilación con cera es un método físico que elimina el vello desde la raíz utilizando cera caliente o fría.",
-  },
-];
-const galeryList: string[] = [
-  "/images/galeria/001.jpg",
-  "/images/galeria/002.jpg",
-  "/images/galeria/003.jpg",
-  "/images/galeria/004.jpg",
-  "/images/galeria/005.jpg",
-  "/images/galeria/006.jpg",
-  "/images/galeria/007.jpg",
-];
 
-interface Testimonios {
-  imgUrl: string;
-  name: string;
-  description: string;
-}
 
-const testimoniosList: Testimonios[] = [
-  {
-    imgUrl: "/images/testimonios/001.jpg",
-    name: "ARIANA BEJERANO",
-    description:
-      "MIIIIIIIII PRECIOSA CLAU gracias por tanto por mis cejas por tu cariño tu amistad por ser como eres tú eres más hermosa te quiero mucho !!! Y como te lo dije hoy te mereces lo mejor del mundo ❤️ cuentas conmigo siempre.",
-  },
-  {
-    imgUrl: "/images/testimonios/002.jpg",
-    name: "LARITZA",
-    description:
-      "Mis primeras cajitas fueron en tus bendecidas manos estará Baños todavía con el uso de la mascarilla 😷 y recién habían abierto las carreteras para que los municipios pudieran ir a provincias y fue la mejor decisión luego volví dos veces más hasta que fuiste en busca de tus sueños BENDICIONES CLAUDIA",
-  },
-  {
-    imgUrl: "/images/testimonios/003.jpg",
-    name: "MAYELA GONZÁLEZ",
-    description:
-      "Mi amor bello súper complacida hace ya como 2 años me hiciste mis cajitas y mis labios 👄 no puede entregarme a mejores manos estoy súper feliz de ser tu clienta y amiga tkmmmmm y sabes que pronto estoy ahí 😘",
-  },
-  {
-    imgUrl: "/images/testimonios/004.jpg",
-    name: " ASHLEY LANDAVERDE",
-    description:
-      "Yo nunca me había realizado un procedimiento como el microblading o la pigmentación en los labios pero a pesar de que tenía un poquito de miedo al principio, fue lo mejor que me pudo haber pasado 😍😍😍 Estoy enamorada de los resultados y de lo bella que me dejaste. Es increíble como un cambio tan pequeño puede hacer una gran diferencia. Gracias por hacer una gran diferencia. Gracias por hacer un trabajo tan maravilloso Claudia",
-  },
-  {
-    imgUrl: "/images/testimonios/005.jpg",
-    name: "DIANYK CABRERA",
-    description:
-      "Bueno mi vida lo primero que me realice contigo fue mis cejitas, que prácticamente parecían que nunca me las había sacado, me las dejaste más que perfectas, la calidad de trabajo y productos es un 100% muy profesional.... también me hice una limpieza facial donde me quitaste todos los puntos blancos, la textura de mi piel es impresionante, suave, hidratada... y lo último fue la depilación láser que fue recientemente, una experiencia muy satisfactoria en tus manos es garantía de excelencia y lo más importante es el trato que brindas muy amable, atenta y confiable... súper complacida con todos los servios",
-  },
-  {
-    imgUrl: "/images/testimonios/006.jpg",
-    name: " MAITE ÁLVAREZ TANG",
-    description:
-      "Hola Clau encanta con tu trabajo me hice las cejas contigo hace 2 años y pronto voy por más servicios tuyos, eres una increíble me encantan tus trabajos bendiciones 🙏🏻",
-  },
-  {
-    imgUrl: "/images/testimonios/007.jpg",
-    name: "BRIANIS CLAUDIA LEIVA",
-    description:
-      "Yo me he hecho de todo contigo 😂😂 empezar por láser y no que cuántas cosas me he hecho, y eres la mejor ♥️ tu sabes que yo te adoro mucho mucho hace rato no voy a verte por cosas de la vida pero mañana ya de nuevo en tus manos ♥️ eres la mejor de la mejor ♥️",
-  },
-  {
-    imgUrl: "/images/testimonios/008.jpg",
-    name: "YILENA VELAZQUEZ BASULTO",
-    description:
-      "Yo hace dos años lo que me hice fue un blanqueamiento dental pero me encantó el resultado, y desde que ví tus trabajos de cejitas quedé fascinada con ti trabajado no te imaginas la motivación que he sentido es tanta la admiración 🙏🏻 porque tus trabajos son perfectamente hermosos y estoy muy feliz contando los días para pasar el curso contigo xq amo arreglar cejitas y quiero aprender más cómo tú 🙏🏻🙏🏻🙏🏻🙏🏻",
-  },
-];
+
 ---
 
 <Layout title="Claudia Secrets">
@@ -192,11 +59,11 @@ const testimoniosList: Testimonios[] = [
     <div class="container">
       <div class="row justify-content-center">
         {
-          serviceList.map((i) => (
+          servicesList.map((i) => (
             <ServiceCard
               direction={i.direction}
-              img={i.img}
-              title={i.title}
+              img={i.imgUrl}
+              title={i.name}
               caption={i.caption}
               description={i.description}
             />
@@ -209,9 +76,9 @@ const testimoniosList: Testimonios[] = [
         <div class="col-12 col-md-4 px-5 py-md-5 text-center">
           <img src={abaut.src} alt="" class="img-fluid" />
         </div>
-        <div class="col-12 col-md-8 text-md-start px-5 pt-4 py-md-5">
+        <div class="col-12 col-md-8 text-md-start px-5 pt-4 py-md-5 text-center text-md-start">
           <p class="display-4 fw-bold text-first">CLAUDIA SECRETS</p>
-          <div class="me-5">
+          <div class="me-md-5 text-center text-md-start">
             <p class="lead">¡Hola! Mi nombre es Claudia Vázquez.</p>
             <p class="lead">
               Soy esteticista certificada con años de experiencia en el campo de
@@ -265,7 +132,7 @@ const testimoniosList: Testimonios[] = [
     <div class="container my-5">
       <div class="row row-cols-1 row-cols-md-4">
         {
-          galeryList.map((i) => (
+          galleryList.map((i) => (
             <div class="col p-3">
               <div class="bg-second p-3">
                 <img src={i} alt="" class="img-fluid" />
@@ -280,7 +147,7 @@ const testimoniosList: Testimonios[] = [
       <div class="container py-5">
         <div class="row d-flex justify-content-center">
           {
-            testimoniosList.map((i) => (
+            testimonialsList.map((i) => (
               <div class="position-relative col-12 col-md-4 my-5 p-2">
                 <div class="h-100 p-4 bg-third text-center shadow">
                   <img

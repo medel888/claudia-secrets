@@ -4,49 +4,70 @@ import { servicesList } from "../../content/services";
 
 export async function getStaticPaths() {
   return servicesList.map(
-    ({ name, imgUrl, description, benefits, aftercare, prices }) => {
+    ({ name, caption, imgUrl, description, benefits, aftercare, prices }) => {
       return {
         params: { name },
-        props: { name, imgUrl, description, benefits, aftercare, prices },
+        props: {
+          name,
+          caption,
+          imgUrl,
+          description,
+          benefits,
+          aftercare,
+          prices,
+        },
       };
     }
   );
 }
 
-const { name, imgUrl, description, benefits, aftercare, prices } = Astro.props;
+const { name, caption, imgUrl, description, benefits, aftercare, prices } =
+  Astro.props;
 ---
 
 <Layout title={name}>
   <main>
     <div class="container">
       <div class="row conatiner-fluid py-5">
-        <div class="col-12 col-md-3">
-          <img src={imgUrl} alt={name} class="img-fluid shadow" />
+        <div class="col-12 col-md-4 p-5 p-md-0">
+          <img
+            src={imgUrl}
+            alt={name}
+            class="img-fluid shadow rounded-circle"
+          />
         </div>
-        <div class="col-12 col-md-8 px-4 d-flex align-items-center">
-          <div>
+        <div class="col-12 col-md-8 px-5 px-md-4">
+          <div class="text-center text-md-start">
             <h1 class="display-3 fw-bold text-first">{name}</h1>
+            <h2 class="display-6 fw-bold text-first">{caption}</h2>
             <p class="lead">{description}</p>
+            <h2 class="display-6 fw-bold text-first">Beneficios</h2>
+            {benefits.map((i) => <p class="lead">• {i}</p>)}
+            <h2 class="display-6 fw-bold text-first">Cuidados Posteriores</h2>
+            {aftercare.map((i) => <p class="lead">• {i}</p>)}
           </div>
         </div>
       </div>
-      <div class="conatiner-fluid">
-        <h2 class="display-6 fw-bold text-first">Beneficios</h2>
-        {benefits.map((i) => <p class="lead">• {i}</p>)}
-        <h2 class="display-6 fw-bold text-first">Cuidados Posteriores</h2>
-        {aftercare.map((i) => <p class="lead">• {i}</p>)}
-        <h2 class="display-6 fw-bold text-first">Precios</h2>
-        <div class="col-12 col-md-4 my-2">
-          <div class="p-2">
-            {
-              prices.map((j) => (
-                <p class="lead">
+      <div class="conatiner bg-second rounded shadow">  
+        <h2 class="display-5 fw-bold text-first text-center">Precios</h2>
+        <div
+          class="row row-cols-1 row-cols-md-2 my-2 p-4"
+        >
+          {
+            prices.map((j) => (
+              <div class="col pe-5">
+                <div class="d-flex bd-highlight">
+                  <p class="m-0 p-2 bd-highlight fst-italic text-uppercase">{j.name}</p>
+                  <div class="m-0 p-2 flex-grow-1 bd-highlight"></div>
+                  <p class="m-0 p-2 bd-highlight fst-italic text-uppercase">$ {j.price}</p>
+                </div>
+                {/* <p class="pe-3 fst-italic text-uppercase">
                   {j.name}
-                  <span class="float-end">{j.price} $</span>
-                </p>
-              ))
-            }
-          </div>
+                  <span class="float-end">$ {j.price}</span>
+                </p> */}
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>
