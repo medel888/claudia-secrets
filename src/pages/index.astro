@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ServiceCard from "../components/serviceCard.astro";
+//import Gallery from "../components/gallery.astro"; 
+import TestimonyCard from "../components/testimonyCard.tsx";
 
 import principalMovil from "../../public/images/banner-movil.png";
 import principalDesktop from "../../public/images/banner-desktop.png";
@@ -14,7 +16,7 @@ import { testimonialsList } from "../content/testimonials";
 <Layout title="Claudia Secrets">
   <main>
     <header class="container-fluid p-0">
-      <div class="card bg-dark text-white border-0 rounded-0">
+      <div class="card text-white border-0 rounded-0">
         <img
           src={principalMovil.src}
           class="card-img d-md-none rounded-0"
@@ -143,11 +145,11 @@ import { testimonialsList } from "../content/testimonials";
         </div>
       </div>
     </div>
-    <div class="container my-5">
-      <div class="row row-cols-1 row-cols-md-4">
+    <!-- <div class="container my-5">
+      <div class="row">
         {
           galleryList.map((i) => (
-            <div class="col p-3">
+            <div class="col-3 p-3">
               <div class="bg-second p-3">
                 <img src={i} alt="" class="img-fluid" />
               </div>
@@ -155,24 +157,20 @@ import { testimonialsList } from "../content/testimonials";
           ))
         }
       </div>
-    </div>
+      <Gallery/>
+    </div> -->
     <div class="bg-second mt-5 py-5 text-center">
       <p class="display-5 text-first fw-bold">TESTIMONIOS</p>
-      <div class="container py-5">
+      <div class="container mt-md-5 pt-md-5">
         <div class="row d-flex justify-content-center">
           {
             testimonialsList.map((i) => (
-              <div class="position-relative col-12 col-md-4 my-5 p-2">
-                <div class="h-100 p-4 bg-third text-center shadow">
-                  <img
-                    src={i.imgUrl}
-                    alt="testimonio"
-                    class="img-fluid position-absolute top-0 start-50 translate-middle w-25 rounded-circle"
-                  />
-                  <p class="mt-4 montserrat-bold">{i.name}</p>
-                  <p>{i.description}</p>
-                </div>
-              </div>
+              <TestimonyCard
+                client:load
+                name={i.name}
+                imageUrl={i.imgUrl}
+                text={i.description}
+              />
             ))
           }
         </div>

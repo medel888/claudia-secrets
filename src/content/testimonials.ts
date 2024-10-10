@@ -49,7 +49,7 @@ interface Testimonials {
     },
     {
       imgUrl: "/images/testimonios/008.jpg",
-      name: "YILENA VELAZQUEZ BASULTO",
+      name: "YILENA VELAZQUEZ",
       description:
         "Yo hace dos años lo que me hice fue un blanqueamiento dental pero me encantó el resultado, y desde que ví tus trabajos de cejitas quedé fascinada con ti trabajado no te imaginas la motivación que he sentido es tanta la admiración 🙏🏻 porque tus trabajos son perfectamente hermosos y estoy muy feliz contando los días para pasar el curso contigo xq amo arreglar cejitas y quiero aprender más cómo tú 🙏🏻🙏🏻🙏🏻🙏🏻",
     },
