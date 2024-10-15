@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ServiceCard from "../components/serviceCard.astro";
 //import Gallery from "../components/gallery.astro"; 
+import Testimonials from "../components/testimonials.astro";
 import TestimonyCard from "../components/testimonyCard.tsx";
 
 import principalMovil from "../../public/images/banner-movil.png";
@@ -82,10 +83,10 @@ import { testimonialsList } from "../content/testimonials";
           <p class="display-4 fw-bold text-first">CLAUDIA'S SECRET</p>
           <div class="me-md-5 text-center text-md-start">
             <p class="lead">¡Hola! Mi nombre es Claudia Vázquez.</p>
+            <li class="lead">Pionera del microblading en Holguín</li>
+            <li class="lead">Fundadora de Claudia’s Secret salón en Holguín, Cuba</li>
             <p class="lead">
-              Pionera del microblading en Holguín Fundadora de Claudia’s Secret
-              salón en Holguín , Cuba Latin Brows Artist de PhyAcademy
-              Registered Phlebotomy Technician Registered medical assistant
+              Latin Brows Artist de PhyAcademy Registered Phlebotomy Technician Registered medical assistant
               Hyaluron pen by GM Belle Institute Professional Aesthetics by GM
               Belle Institute Plasma rico en plaquetas y fibrina by GM Belle
               Institute Fibroblast/ plasma pen by GM Belle Institute
@@ -159,25 +160,14 @@ import { testimonialsList } from "../content/testimonials";
       </div>
       <Gallery/>
     </div> -->
-    <div class="bg-second mt-5 py-5 text-center">
-      <p class="display-5 text-first fw-bold">TESTIMONIOS</p>
-      <div class="container mt-md-5 pt-md-5">
-        <div class="row d-flex justify-content-center">
-          {
-            testimonialsList.map((i) => (
-              <TestimonyCard
-                client:load
-                name={i.name}
-                imageUrl={i.imgUrl}
-                text={i.description}
-              />
-            ))
-          }
-        </div>
+    <div class="bg-second mt-5 py-5">
+      <p class="display-5 text-center text-first fw-bold">TESTIMONIOS</p>
+      <Testimonials/>
+      <div class="container text-center">
+        <a href="" class="btn btn-outline-first btn-lg border-2 rounded-0 w-md-25"
+          >PROGRAMAR CITA</a
+        >
       </div>
-      <a href="" class="btn btn-outline-first btn-lg border-2 rounded-0 w-md-25"
-        >PROGRAMAR CITA</a
-      >
     </div>
   </main>
 </Layout>

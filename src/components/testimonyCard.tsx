@@ -20,7 +20,7 @@ export default function Testimony_card({ imageUrl, name, text } : TestimonyCardP
     }
 
     return (
-            <div className="col-md-8 col-lg-4 p-4 mb-md-5">
+            <div className="col-12 col-md-4 p-4">
                 <div className="testimonial-card">
                     <div className="profile-picture">
                         <img
@@ -29,7 +29,7 @@ export default function Testimony_card({ imageUrl, name, text } : TestimonyCardP
                             className="img-fluid rounded-circle"
                         />
                     </div>
-                    <h3 className="name mt-5 mt-md-3">{name}</h3>
+                    <h4 className="name mt-5 mt-md-3">{name}</h4>
                     <div className={isExpanded ? ('') : ('testimonial-text')}  aria-live="polite">
                         <p>{text}</p>
                     </div>
