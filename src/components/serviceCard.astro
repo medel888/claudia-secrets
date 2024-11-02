@@ -1,43 +1,60 @@
 ---
 interface Props {
-    direction: boolean;
-	img: string;
-	title: string;
-    caption: string;
-	description: string;
+  direction: boolean;
+  img: string;
+  title: string;
+  caption: string;
+  description: string;
 }
 
-const {direction, img, title, caption, description} =  Astro.props; 
+const { direction, img, title, caption, description } = Astro.props;
 ---
-<div class="col-12 col-md-8 my-3">
-    {direction? (
-        <div class="row justify-content-center shadow">
-            <div class="col-11 col-md-4 px-0">
-                <img src={img} alt="servicio" class="img-fluid" />
-            </div>
-            <div class="col-11 col-md-8 px-5 py-4 bg-second">
-                <div class="">
-                    <p class="fs-1 text-first mb-0">{title}</p>
-                    <p class="fs-5 text-first lead">{caption}</p>
-                    <p class="lead">{description}</p>
-                    <a href={"/services/" + title} class="text-decoration-none text-first fw-bold fst-italic lead">Ver precios y conocer más</a>
-                </div>
-            </div>
+
+{
+  direction ? (
+    <div class="card bg-second col-12 col-md-9 mb-3 p-0 rounded-0 shadow">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src={img} class="img-fluid" alt="..." />
         </div>
-    ) : (
-        <div class="row justify-content-center flex-column-reverse flex-md-row shadow">
-            <div class="col-11 col-md-8 p-4 bg-second mx-auto mx-md-0 px-5 py-4">
-                <div class="">
-                    <p class="fs-1 text-first mb-0">{title}</p>
-                    <p class="fs-5 text-first lead">{caption}</p>
-                    <p class="lead">{description}</p>
-                    <a href={"/services/" + title} class="text-decoration-none text-first fw-bold fst-italic lead">Ver precios y conocer más</a>
-                </div>
-            </div>
-            <div class="col-11 col-md-4 px-0 mx-auto mx-md-0">
-                <img src={img} alt="servicio" class="img-fluid" />
-            </div>
+        <div class="col-md-8">
+          <div class="card-body p-4">
+            <h2 class="fs-1 card-title text-first">{title}</h2>
+            <p class="fs-5 text-first lead">{caption}</p>
+            <p class="card-text lead">{description}</p>
+            <a
+              href={"/services/" + title}
+              class="text-decoration-none text-first fw-bold fst-italic lead"
+            >
+              Ver precios y conocer más
+            </a>
+          </div>
         </div>
-    )}
-    
-</div>
+      </div>
+    </div>
+  ) : (
+    <div class="card flex-column-reverse flex-md-row bg-second col-12 col-md-9 mb-3 p-0 rounded-0 shadow">
+      <div class="row g-0">
+        <div class="d-md-none">
+          <img src={img} class="img-fluid" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body p-4">
+            <h2 class="fs-1 card-title text-first">{title}</h2>
+            <p class="fs-5 text-first lead">{caption}</p>
+            <p class="card-text lead">{description}</p>
+            <a
+              href={"/services/" + title}
+              class="text-decoration-none text-first fw-bold fst-italic lead"
+            >
+              Ver precios y conocer más
+            </a>
+          </div>
+        </div>
+        <div class="d-none d-md-block col-md-4">
+          <img src={img} class="img-fluid" alt="..." />
+        </div>
+      </div>
+    </div>
+  )
+}

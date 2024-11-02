@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ServiceCard from "../components/serviceCard.astro";
-//import Gallery from "../components/gallery.astro"; 
+import Gallery from "../components/gallery.astro";
 import Testimonials from "../components/testimonials.astro";
-import TestimonyCard from "../components/testimonyCard.tsx";
+//import Gallery from "../components/gallery";
 
 import principalMovil from "../../public/images/banner-movil.png";
 import principalDesktop from "../../public/images/banner-desktop.png";
@@ -57,8 +57,8 @@ import { testimonialsList } from "../content/testimonials";
       </div>
     </div>
 
-    <div class="container">
-      <div class="row justify-content-center">
+    <div class="container" id="servicios">
+      <div class="row justify-content-center m-3">
         {
           servicesList.map((i) => (
             <ServiceCard
@@ -74,80 +74,50 @@ import { testimonialsList } from "../content/testimonials";
     </div>
     <div class="bg-second container-fluid my-5 py-5">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-4 px-5 py-md-5 text-center">
+        <div class="col-12 col-md-4 px-5 py-md-5">
           <img src={abaut.src} alt="" class="img-fluid" />
         </div>
         <div
-          class="col-12 col-md-8 text-md-start px-5 pt-4 py-md-5 text-center text-md-start"
+          class="col-12 col-md-6 text-md-start px-5 pt-4 py-md-5 text-center text-md-start"
         >
           <p class="display-4 fw-bold text-first">CLAUDIA'S SECRET</p>
           <div class="me-md-5 text-center text-md-start">
             <p class="lead">¡Hola! Mi nombre es Claudia Vázquez.</p>
             <li class="lead">Pionera del microblading en Holguín</li>
-            <li class="lead">Fundadora de Claudia’s Secret salón en Holguín, Cuba</li>
-            <p class="lead">
-              Latin Brows Artist de PhyAcademy Registered Phlebotomy Technician Registered medical assistant
-              Hyaluron pen by GM Belle Institute Professional Aesthetics by GM
-              Belle Institute Plasma rico en plaquetas y fibrina by GM Belle
-              Institute Fibroblast/ plasma pen by GM Belle Institute
-              Rejuvenecimiento para el área de los ojos by GM Belle Institute
-              Behind the Chair Institute 750 hours by Esthetician Lic. Texas
-              barbering & cosmetology/ esthetician Lic. bloodborne pathogens for
-              body and tattoo artist Lic. láser hair removal apprentice
-              Fundadora de Claudia’s Secrets Divine LLC
-            </p>
-            <!-- <p class="lead">¡Hola! Mi nombre es Claudia Vázquez.</p>
-            <p class="lead">
-              Soy esteticista certificada con años de experiencia en el campo de
-              la belleza y el bienestar. Desde que me gradué, he tenido la
-              oportunidad de trabajar como  Medical Assistant, Latin Brows
-              Artist, PMU Artist y Phlebotomy Technician, lo que me ha permitido
-              desarrollar una amplia gama de habilidades y conocimientos.
-            </p>
-            <p class="lead">
-              Como esteticista, me apasiona ayudar a las personas a realzar su
-              belleza natural. Amo encontrar el mejor tratamiento personalizado
-              para cada cliente, desde faciales rejuvenecedores hasta depilación
-              profesional.
-            </p>
-            <p class="lead">
-              Mis habilidades como Medical Assistant me permiten brindar un
-              cuidado integral a los pacientes, asistiendo al médico en
-              procedimientos médicos y proporcionando información crucial sobre
-              su salud.
-            </p>
-            <p class="lead">
-              Como Latin Brows Artist, me especializo en diseñar y aplicar cejas
-              perfectas que realzan la belleza del rostro.  Estoy familiarizada
-              con las últimas técnicas de microblading y micropigmentación para
-              crear cejas de aspecto natural que complementan las facciones de
-              cada persona.
-            </p>
-            <p class="lead">
-              Como PMU Artist, tengo la destreza para realizar micropigmentación
-              de labios, ojos y cejas, creando looks impecables y duraderos.  Me
-              apasiona el arte de la micropigmentación y la posibilidad de
-              mejorar la autoestima de mis clientes.
-            </p>
-            <p class="lead">
-              Mi experiencia como Phlebotomy Technician me permite realizar
-              extracciones de sangre de manera profesional y segura.  Me siento
-              cómoda con las técnicas de extracción y garantizo un proceso
-              rápido y sin dolor para el paciente.
-            </p>
-            <p class="lead">
-              Mi experiencia como profesional de la belleza me ha permitido
-              desarrollar una amplia gama de habilidades que me permiten brindar
-              un servicio completo y personalizado a mis clientes. Estoy
-              comprometida con la excelencia y con ayudar a mis clientes a
-              sentirse seguros y radiantes. 😊
-            </p> -->
+            <li class="lead">
+              Fundadora de Claudia’s Secret salón en Holguín, Cuba
+            </li>
+            <li class="lead">Latin Brows Artist de PhyAcademy.</li>
+            <li class="lead">Registered Phlebotomy Technician.</li>
+            <li class="lead">Registered medical assistant.</li>
+            <li class="lead">Hyaluron pen by GM Belle Institute.</li>
+            <li class="lead">Professional Aesthetics by GM Belle Institute.</li>
+            <li class="lead">
+              Plasma rico en plaquetas y fibrina by GM Belle Institute.
+            </li>
+            <li class="lead">Fibroblast/plasma pen by GM Belle Institute.</li>
+            <li class="lead">
+              Rejuvenecimiento para el área de los ojos by GM Belle Institute.
+            </li>
+            <li class="lead">
+              Behind the Chair Institute, 750 hours, by Esthetician Lic. Texas.
+            </li>
+            <li class="lead">Barbering & cosmetology/esthetician Lic.</li>
+            <li class="lead">
+              Bloodborne pathogens for body and tattoo artist Lic.
+            </li>
+            <li class="lead">Láser hair removal apprentice.</li>
+            <li class="lead">Fundadora de Claudia’s Secrets Divine LLC.</li>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="container my-5">
-      <div class="row">
+    <div class="container my-5" id="galeria">
+      <p class="display-5 text-center text-first fw-bold">GALERÍA</p>
+      <div class="d-flex justify-content-center mt-5">
+        <Gallery />
+      </div>
+      <!-- <div class="row">
         {
           galleryList.map((i) => (
             <div class="col-3 p-3">
@@ -157,14 +127,15 @@ import { testimonialsList } from "../content/testimonials";
             </div>
           ))
         }
-      </div>
-      <Gallery/>
-    </div> -->
-    <div class="bg-second mt-5 py-5">
+      </div> -->
+    </div>
+    <div class="bg-second mt-5 py-5" id="testimonios">
       <p class="display-5 text-center text-first fw-bold">TESTIMONIOS</p>
-      <Testimonials/>
+      <Testimonials />
       <div class="container text-center">
-        <a href="" class="btn btn-outline-first btn-lg border-2 rounded-0 w-md-25"
+        <a
+          href=""
+          class="btn btn-outline-first btn-lg border-2 rounded-0 w-md-25"
           >PROGRAMAR CITA</a
         >
       </div>

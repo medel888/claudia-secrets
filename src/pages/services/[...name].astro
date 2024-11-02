@@ -45,23 +45,22 @@ const { name, caption, imgUrl, description, benefits, aftercare, prices } =
           <h2 class="display-6 fw-bold text-first">Cuidados Posteriores</h2>
           {aftercare.map((i) => <p class="lead">• {i}</p>)}
         </div>
-        <div class="col-12 col-lg-5 py-3 px-5 bg-second rounded shadow">
-          <h2 class="display-5 fw-bold text-first text-center">Precios</h2>
-          {
-            prices.map((j) => (
-              <div class="row my-2">
-                <p class="pe-3 fst-italic text-uppercase">
-                  {j.name}
-                  <span class="float-end">$ {j.price}</span>
-                </p>
-              </div>
-            ))
-          }
+        <div class="col-12 col-lg-5">
+          <div class="py-3 px-5 bg-second rounded shadow">
+            <h2 class="display-5 fw-bold text-first text-center">Precios</h2>
+            {
+              prices.map((j) => (
+                <div class="row my-2">
+                  <p class="pe-3 fst-italic text-uppercase">
+                    {j.name}
+                    <span class="float-end">$ {j.price}</span>
+                  </p>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
-    </div>
-    <div class="conatiner bg-second rounded shadow">
-      
     </div>
   </main>
 </Layout>

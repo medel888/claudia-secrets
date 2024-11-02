@@ -49,8 +49,8 @@
 
 .read-more-container {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .read-more-text {
