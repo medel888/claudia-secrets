@@ -18,39 +18,42 @@ import { testimonialsList } from "../content/testimonials";
   <main>
     <header class="container-fluid p-0">
       <div class="card bg-dark text-white border-0 rounded-0">
-        <img src={principalMovil.src} class="card-img d-md-none rounded-0" alt="...">
-        <img src={principalDesktop.src} class="card-img d-none d-md-block rounded-0" alt="...">
-        <div class="card-img-overlay d-flex align-items-end align-items-md-start h-100 p-4">
+        <img
+          src={principalMovil.src}
+          class="card-img d-md-none rounded-0"
+          alt="..."
+        />
+        <img
+          src={principalDesktop.src}
+          class="card-img d-none d-md-block rounded-0"
+          alt="..."
+        />
+        <div
+          class="card-img-overlay d-flex align-items-end align-items-md-start h-100 p-4"
+        >
           <div>
-            <p class="text-white display-2 display-md-2 montserrat-bold">
+            <p class="text-white display-2 display-md-2 montserrat-bold mb-1">
               ESTÁS HECHA <br /> PARA BRILLAR.
             </p>
-            <p class="text-white fs-2 display-md-2 montserrat-bold">
+            <p class="text-white fs-2 display-md-2 montserrat-bold mb-1">
               VEN Y DESCUBRE <br /> TU LADO MÁS RADIANTE.
             </p>
+            <a
+              href="https://wa.link/j9b13v"
+              class="btn btn-outline-second my-2"
+              >PROGRAMAR CONSULTA 0NLINE</a
+            >
+            <a
+              href="https://wa.link/j9b13v"
+              class="btn btn-outline-second my-2"
+              >PROGRAMAR CITA</a
+            >
           </div>
         </div>
       </div>
     </header>
-    <div
-      class="row container-fluid justify-content-center justify-content-md-around my-5 mx-0 p-0"
-    >
-      <div class="col-11 col-md-4">
-        <button
-          class="btn btn-outline-first btn-lg border-2 rounded-0 w-100 my-2 my-md-0"
-          >PROGRAMAR CITA</button
-        >
-      </div>
-      <div class="col-11 col-md-4">
-        <button
-          class="btn btn-outline-first btn-lg border-2 rounded-0 w-100 my-2 my-md-0"
-          >PROGRAMAR CONSULTA 0NLINE</button
-        >
-      </div>
-    </div>
-
     <div class="container" id="servicios">
-      <div class="row justify-content-center m-3">
+      <div class="row justify-content-center m-3 my-md-5">
         {
           servicesList.map((i) => (
             <ServiceCard
